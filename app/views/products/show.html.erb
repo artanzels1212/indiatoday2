@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Add product:</strong>
+  <%= @product.add_product %>
+</p>
+
+<p>
+  <strong>Product name:</strong>
+  <%= @product.product_name %>
+</p>
+
+<p>
+  <strong>Approx price:</strong>
+  <%= @product.approx_price %>
+</p>
+
+<p>
+  <strong>Min order quantity:</strong>
+  <%= @product.min_order_quantity %>
+</p>
+
+<p>
+  <strong>Unit type:</strong>
+  <%= @product.unit_type %>
+</p>
+
+<p>
+  <strong>Product group:</strong>
+  <%= @product.product_group %>
+</p>
+
+<p>
+  <strong>Product desc:</strong>
+  <%= @product.product_desc %>
+</p>
+
+<p>
+  <strong>Top 5:</strong>
+  <%= @product.top_5 %>
+</p>
+
+<p>
+  <strong>Created by:</strong>
+  <%= @product.created_by %>
+</p>
+
+<p>
+  <strong>Updated by:</strong>
+  <%= @product.updated_by %>
+</p>
+
+<p>
+  <strong>Deleted by:</strong>
+  <%= @product.deleted_by %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @product.user %>
+</p>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>

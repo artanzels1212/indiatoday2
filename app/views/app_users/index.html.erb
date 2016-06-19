@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h3 align="center">App Users</h3>
+<table class="table table-striped table-bordered" id="appuser">
+  <thead>
+    <tr>
+      <th>User name</th>
+      <th>Email</th>
+      <th>Mobile no</th>
+      <th>City</th>
+      <th>Created By</th>
+      <th>Password</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @app_users.each do |app_user| %>
+      <tr>
+        <td><%= app_user.user_name %></td>
+        <td><%= app_user.email %></td>
+        <td><%= app_user.mobile_no %></td>
+        <td><%= app_user.city %></td>
+        <td><%= User.find(app_user.user_id).email %></td>
+        <td><%= app_user.password %></td>
+        <td><%= link_to '<i class="fa fa-eye" data-container="body" title="View Record" rel="popover"></i>'.html_safe, app_user, :class=>"btn btn-primary" %>
+        <%= link_to '<i class="fa fa-pencil-square" data-container="body" title="Edit Record" rel="popover"></i>'.html_safe, edit_app_user_path(app_user),:class=>"btn btn-primary" %>
+        <%= link_to '<i class="fa fa-trash" data-container="body" title="Delete Record" rel="popover"></i>'.html_safe, app_user, method: :delete, data: { confirm: 'Are you sure?' },:class=>"btn btn-primary" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Create App user', new_app_user_path,:class=>"btn btn-primary"%>

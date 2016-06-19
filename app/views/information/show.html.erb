@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Create by:</strong>
+  <%= @information.create_By %>
+</p>
+
+<p>
+  <strong>Sync date:</strong>
+  <%= @information.sync_date %>
+</p>
+
+<p>
+  <strong>Sync status:</strong>
+  <%= @information.sync_status %>
+</p>
+
+<p>
+  <strong>Google status:</strong>
+  <%= @information.google_status %>
+</p>
+
+<p>
+  <strong>Delivery no:</strong>
+  <%= @information.delivery_no %>
+</p>
+
+<p>
+  <strong>Delivery status:</strong>
+  <%= @information.delivery_status %>
+</p>
+
+<p>
+  <strong>Update by idil:</strong>
+  <%= @information.update_by_idil %>
+</p>
+
+<p>
+  <strong>Update date idil:</strong>
+  <%= @information.update_date_idil %>
+</p>
+
+<p>
+  <strong>Update by customer:</strong>
+  <%= @information.update_by_customer %>
+</p>
+
+<p>
+  <strong>Update date customer:</strong>
+  <%= @information.update_date_customer %>
+</p>
+
+<p>
+  <strong>Qc date:</strong>
+  <%= @information.qc_date %>
+</p>
+
+<p>
+  <strong>Qc by:</strong>
+  <%= @information.qc_by %>
+</p>
+
+<p>
+  <strong>Qc status:</strong>
+  <%= @information.qc_status %>
+</p>
+
+<p>
+  <strong>Qc remarks:</strong>
+  <%= @information.qc_remarks %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @information.user %>
+</p>
+
+<%= link_to 'Edit', edit_information_path(@information) %> |
+<%= link_to 'Back', information_index_path %>

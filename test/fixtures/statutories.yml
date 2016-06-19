@@ -1,0 +1,51 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  reg_no: MyString
+  reg_authority: MyString
+  cin_no: MyString
+  tan_no: MyString
+  pan_no: MyString
+  service_tax_no: MyString
+  excise_reg_no: MyString
+  tin_no: MyString
+  dgft: MyString
+  cst_no: MyString
+  ssi_no: MyString
+  epf_no: MyString
+  esi_no: MyString
+  sct_no: MyString
+  dnb_no: MyString
+  rbi_no: MyString
+  fssai: MyString
+  nsic_no: MyString
+  sst_no: MyString
+  created_by: MyString
+  updated_by: MyString
+  deleted_by: MyString
+  user_id: 
+
+two:
+  reg_no: MyString
+  reg_authority: MyString
+  cin_no: MyString
+  tan_no: MyString
+  pan_no: MyString
+  service_tax_no: MyString
+  excise_reg_no: MyString
+  tin_no: MyString
+  dgft: MyString
+  cst_no: MyString
+  ssi_no: MyString
+  epf_no: MyString
+  esi_no: MyString
+  sct_no: MyString
+  dnb_no: MyString
+  rbi_no: MyString
+  fssai: MyString
+  nsic_no: MyString
+  sst_no: MyString
+  created_by: MyString
+  updated_by: MyString
+  deleted_by: MyString
+  user_id: 

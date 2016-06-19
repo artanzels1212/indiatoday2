@@ -1,0 +1,109 @@
+<%= form_for(@statutory) do |f| %>
+  <% if @statutory.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@statutory.errors.count, "error") %> prohibited this statutory from being saved:</h2>
+
+      <ul>
+      <% @statutory.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :reg_no %><br>
+    <%= f.text_field :reg_no %>
+  </div>
+  <div class="field">
+    <%= f.label :reg_authority %><br>
+    <%= f.text_field :reg_authority %>
+  </div>
+  <div class="field">
+    <%= f.label :cin_no %><br>
+    <%= f.text_field :cin_no %>
+  </div>
+  <div class="field">
+    <%= f.label :tan_no %><br>
+    <%= f.text_field :tan_no %>
+  </div>
+  <div class="field">
+    <%= f.label :pan_no %><br>
+    <%= f.text_field :pan_no %>
+  </div>
+  <div class="field">
+    <%= f.label :service_tax_no %><br>
+    <%= f.text_field :service_tax_no %>
+  </div>
+  <div class="field">
+    <%= f.label :excise_reg_no %><br>
+    <%= f.text_field :excise_reg_no %>
+  </div>
+  <div class="field">
+    <%= f.label :tin_no %><br>
+    <%= f.text_field :tin_no %>
+  </div>
+  <div class="field">
+    <%= f.label :dgft %><br>
+    <%= f.text_field :dgft %>
+  </div>
+  <div class="field">
+    <%= f.label :cst_no %><br>
+    <%= f.text_field :cst_no %>
+  </div>
+  <div class="field">
+    <%= f.label :ssi_no %><br>
+    <%= f.text_field :ssi_no %>
+  </div>
+  <div class="field">
+    <%= f.label :epf_no %><br>
+    <%= f.text_field :epf_no %>
+  </div>
+  <div class="field">
+    <%= f.label :esi_no %><br>
+    <%= f.text_field :esi_no %>
+  </div>
+  <div class="field">
+    <%= f.label :sct_no %><br>
+    <%= f.text_field :sct_no %>
+  </div>
+  <div class="field">
+    <%= f.label :dnb_no %><br>
+    <%= f.text_field :dnb_no %>
+  </div>
+  <div class="field">
+    <%= f.label :rbi_no %><br>
+    <%= f.text_field :rbi_no %>
+  </div>
+  <div class="field">
+    <%= f.label :fssai %><br>
+    <%= f.text_field :fssai %>
+  </div>
+  <div class="field">
+    <%= f.label :nsic_no %><br>
+    <%= f.text_field :nsic_no %>
+  </div>
+  <div class="field">
+    <%= f.label :sst_no %><br>
+    <%= f.text_field :sst_no %>
+  </div>
+  <div class="field">
+    <%= f.label :created_by %><br>
+    <%= f.text_field :created_by %>
+  </div>
+  <div class="field">
+    <% f.label :updated_by %><br>
+    <% f.text_field :updated_by %>
+  </div>
+  <div class="field">
+    <% f.label :deleted_by %><br>
+    <% f.text_field :deleted_by %>
+  </div>
+  <div class="field">
+    <% f.label :user_id %><br>
+    <% f.text_field :user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

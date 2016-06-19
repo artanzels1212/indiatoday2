@@ -1,0 +1,2 @@
+module FormDetailOnesHelper
+end

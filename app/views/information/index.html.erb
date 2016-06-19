@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+<h3 align="center">Listing Information</h3>
+<table class="table table-striped table-bordered" id="information">
+  <thead>
+    <tr>
+      <th>Create by</th>
+      <th>Sync date</th>
+      <th>Sync status</th>
+      <th>Google status</th>
+      <th>Delivery no</th>
+      <th>Delivery status</th>
+      <th>Update by idil</th>
+      <th>Update date idil</th>
+      <th>Update by customer</th>
+      <th>Update date customer</th>
+      <th>Qc date</th>
+      <th>Qc by</th>
+      <th>Qc status</th>
+      <th>Qc remarks</th>
+      <!-- <th>User</th> -->
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @information.each do |information| %>
+      <tr>
+        <td><%= information.create_By %></td>
+        <td><%= information.sync_date %></td>
+        <td><%= information.sync_status %></td>
+        <td><%= information.google_status %></td>
+        <td><%= information.delivery_no %></td>
+        <td><%= information.delivery_status %></td>
+        <td><%= information.update_by_idil %></td>
+        <td><%= information.update_date_idil %></td>
+        <td><%= information.update_by_customer %></td>
+        <td><%= information.update_date_customer %></td>
+        <td><%= information.qc_date %></td>
+        <td><%= information.qc_by %></td>
+        <td><%= information.qc_status %></td>
+        <td><%= information.qc_remarks %></td>
+        <!-- <td><%= information.user %></td> -->
+        <td><%= link_to 'Show', information %>
+        <%= link_to 'Edit', edit_information_path(information) %>
+        <%= link_to 'Destroy', information, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<% link_to 'New Information', new_information_path %>

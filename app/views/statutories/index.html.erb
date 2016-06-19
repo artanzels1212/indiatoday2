@@ -1,0 +1,67 @@
+<p id="notice"><%= notice %></p>
+<h3 align="center">Listing Statutories</h3>
+<table class="table table-striped table-bordered" id="statutories">
+  <thead>
+    <tr>
+      <th>Reg no</th>
+      <th>Reg authority</th>
+      <th>Cin no</th>
+      <th>Tan no</th>
+      <th>Pan no</th>
+      <th>Service tax no</th>
+      <th>Excise reg no</th>
+      <th>Tin no</th>
+      <th>Dgft</th>
+      <th>Cst no</th>
+      <th>Ssi no</th>
+      <th>Epf no</th>
+      <th>Esi no</th>
+      <th>Sct no</th>
+      <th>Dnb no</th>
+      <th>Rbi no</th>
+      <th>Fssai</th>
+      <th>Nsic no</th>
+      <th>Sst no</th>
+      <th>Created by</th>
+      <!-- <th>Updated by</th>
+      <th>Deleted by</th>
+      <th>User</th> -->
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @statutories.each do |statutory| %>
+      <tr>
+        <td><%= statutory.reg_no %></td>
+        <td><%= statutory.reg_authority %></td>
+        <td><%= statutory.cin_no %></td>
+        <td><%= statutory.tan_no %></td>
+        <td><%= statutory.pan_no %></td>
+        <td><%= statutory.service_tax_no %></td>
+        <td><%= statutory.excise_reg_no %></td>
+        <td><%= statutory.tin_no %></td>
+        <td><%= statutory.dgft %></td>
+        <td><%= statutory.cst_no %></td>
+        <td><%= statutory.ssi_no %></td>
+        <td><%= statutory.epf_no %></td>
+        <td><%= statutory.esi_no %></td>
+        <td><%= statutory.sct_no %></td>
+        <td><%= statutory.dnb_no %></td>
+        <td><%= statutory.rbi_no %></td>
+        <td><%= statutory.fssai %></td>
+        <td><%= statutory.nsic_no %></td>
+        <td><%= statutory.sst_no %></td>
+        <td><%= statutory.created_by %></td>
+        <!-- <td><%= statutory.updated_by %></td>
+        <td><%= statutory.deleted_by %></td>
+        <td><%= statutory.user %></td> -->
+        <td><%= link_to 'Show', statutory %>
+        <%= link_to 'Edit', edit_statutory_path(statutory) %>
+        <%= link_to 'Destroy', statutory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<% link_to 'New Statutory', new_statutory_path %>

@@ -1,0 +1,105 @@
+<%= form_for(@biz_tab) do |f| %>
+  <% if @biz_tab.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@biz_tab.errors.count, "error") %> prohibited this biz_tab from being saved:</h2>
+
+      <ul>
+      <% @biz_tab.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :primary_business_type %><br>
+    <%= f.text_field :primary_business_type %>
+  </div>
+  <div class="field">
+    <%= f.label :website %><br>
+    <%= f.text_area :website %>
+  </div>
+  <div class="field">
+    <%= f.label :about_us %><br>
+    <%= f.text_field :about_us %>
+  </div>
+  <div class="field">
+    <%= f.label :year_of_establishment %><br>
+    <%= f.text_field :year_of_establishment %>
+  </div>
+  <div class="field">
+    <%= f.label :no_of_employees %><br>
+    <%= f.text_field :no_of_employees %>
+  </div>
+  <div class="field">
+    <%= f.label :annual_sales %><br>
+    <%= f.text_field :annual_sales %>
+  </div>
+  <div class="field">
+    <%= f.label :ownership_type %><br>
+    <%= f.text_field :ownership_type %>
+  </div>
+  <div class="field">
+    <%= f.label :alternate_website %><br>
+    <%= f.text_area :alternate_website %>
+  </div>
+  <div class="field">
+    <%= f.label :additional_businesses %><br>
+    <%= f.text_area :additional_businesses %>
+  </div>
+  <div class="field">
+    <%= f.label :office_type %><br>
+    <%= f.text_field :office_type %>
+  </div>
+  <div class="field">
+    <%= f.label :supplier_buyer_both %><br>
+    <%= f.text_field :question %>
+  </div>
+  <div class="field">
+    <%= f.label :bankers_details %><br>
+    <%= f.text_field :bankers_details %>
+  </div>
+  <div class="field">
+    <%= f.label :business_day %><br>
+    <%= f.text_field :business_day %>
+  </div>
+  <div class="field">
+    <%= f.label :business_hours %><br>
+    <%= f.text_field :business_hours %>
+  </div>
+  <div class="field">
+    <%= f.label :specialization %><br>
+    <%= f.text_field :specialization %>
+  </div>
+  <div class="field">
+    <%= f.label :remarks %><br>
+    <%= f.text_field :remarks %>
+  </div>
+  <div class="field">
+    <%= f.label :deals_in %><br>
+    <%= f.text_field :deals_in %>
+  </div>
+  <div class="field">
+    <%= f.label :business_preferred_area %><br>
+    <%= f.text_field :business_preferred_area %>
+  </div>
+  <div class="field">
+    <%= f.label :created_by %><br>
+    <%= f.text_field :created_by %>
+  </div>
+  <div class="field">
+    <% f.label :updated_by %><br>
+    <% f.text_field :updated_by %>
+  </div>
+  <div class="field">
+    <% f.label :deleted_by %><br>
+    <% f.text_field :deleted_by %>
+  </div>
+  <div class="field">
+    <% f.label :user_id %><br>
+    <% f.text_field :user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

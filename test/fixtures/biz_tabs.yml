@@ -1,0 +1,49 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  primary_business_type: MyString
+  website: MyText
+  about_us: MyString
+  year_of_establishment: MyString
+  no_of_employees: MyString
+  annual_sales: MyString
+  ownership_type: MyString
+  alternate_website: MyText
+  additional_businesses: MyText
+  office_type: MyString
+  question: MyString
+  bankers_details: MyString
+  business_day: MyString
+  business_hours: MyString
+  specialization: MyString
+  remarks: MyString
+  deals_in: MyString
+  business_preferred_area: MyString
+  created_by: MyString
+  updated_by: MyString
+  deleted_by: MyString
+  user_id: 
+
+two:
+  primary_business_type: MyString
+  website: MyText
+  about_us: MyString
+  year_of_establishment: MyString
+  no_of_employees: MyString
+  annual_sales: MyString
+  ownership_type: MyString
+  alternate_website: MyText
+  additional_businesses: MyText
+  office_type: MyString
+  question: MyString
+  bankers_details: MyString
+  business_day: MyString
+  business_hours: MyString
+  specialization: MyString
+  remarks: MyString
+  deals_in: MyString
+  business_preferred_area: MyString
+  created_by: MyString
+  updated_by: MyString
+  deleted_by: MyString
+  user_id: 

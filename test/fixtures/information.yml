@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  create_By: MyString
+  sync_date: MyString
+  sync_status: MyString
+  google_status: MyString
+  delivery_no: MyString
+  delivery_status: MyString
+  update_by_idil: MyString
+  update_date_idil: MyString
+  update_by_customer: MyString
+  update_date_customer: MyString
+  qc_date: MyString
+  qc_by: MyString
+  qc_status: MyString
+  qc_remarks: MyString
+  user_id: 
+
+two:
+  create_By: MyString
+  sync_date: MyString
+  sync_status: MyString
+  google_status: MyString
+  delivery_no: MyString
+  delivery_status: MyString
+  update_by_idil: MyString
+  update_date_idil: MyString
+  update_by_customer: MyString
+  update_date_customer: MyString
+  qc_date: MyString
+  qc_by: MyString
+  qc_status: MyString
+  qc_remarks: MyString
+  user_id: 

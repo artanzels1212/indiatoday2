@@ -1,0 +1,111 @@
+
+  <br>
+  <%=form_tag website_details_path, method: 'get' do%>
+            
+    <input type="date" name="dateF" id="dateF" value="<%=params[:dateF].to_s%>" >
+
+    <select type="text" name="agentF" id="agentF" value="<%=params[:agentF].to_s%>" style="box-shadow:none;border:1px solid #67696f;height:40px;background-color:#fff;">
+        <option value="">Select</option>>
+      <%AppUser.all.each do |k|%>
+        <option value="<%=k.id%>"><%=k.email%></option>
+      <%end%>
+    </select>
+
+    <%=submit_tag ('Search'),name: nil,class: "btn btn-danger", style: "height:40px;"%>
+  <%end%>
+    <br>
+
+<p id="notice"><%= notice %></p>
+
+<h3 align="center">Listing Website Details</h3>
+<table class="table table-striped table-bordered" id="website_details">
+  <thead>
+    <tr>
+      <th>Hp key desc</th>
+      <th>Hp detail desc</th>
+      <th>Au profile heading</th>
+      <th>Au profile desc</th>
+      <th>Awards heading</th>
+      <th>Awards desc</th>
+      <th>Qc heading</th>
+      <th>Qc desc</th>
+      <th>Infra heading</th>
+      <th>Infra desc</th>
+      <th>Testimonial date</th>
+      <th>Testimonial desc</th>
+      <th>News date</th>
+      <th>News headline</th>
+      <th>News coverage url</th>
+      <th>News desc</th>
+      <th>Job title</th>
+      <th>Job desc</th>
+      <th>Cp heading</th>
+      <th>Cp desc</th>
+      <th>Products</th>
+      <th>Team</th>
+      <th>Cert heading</th>
+      <th>Cert details</th>
+      <th>Valid from</th>
+      <th>Valid till</th>
+      <th>Issued on</th>
+      <th>Issued by</th>
+      <th>Honour award</th>
+      <th>Patents</th>
+      <th>Trademarks</th>
+      <th>Created by</th>
+      <!-- <th>Updated by</th>
+      <th>Deleted by</th>
+      <th>User</th> -->
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @website_details.each do |website_detail| %>
+      <tr>
+        <td><%= website_detail.hp_key_desc %></td>
+        <td><%= website_detail.hp_detail_desc %></td>
+        <td><%= website_detail.au_profile_heading %></td>
+        <td><%= website_detail.au_profile_desc %></td>
+        <td><%= website_detail.awards_heading %></td>
+        <td><%= website_detail.awards_desc %></td>
+        <td><%= website_detail.qc_heading %></td>
+        <td><%= website_detail.qc_desc %></td>
+        <td><%= website_detail.infra_heading %></td>
+        <td><%= website_detail.infra_desc %></td>
+        <td><%= website_detail.testimonial_date %></td>
+        <td><%= website_detail.testimonial_desc %></td>
+        <td><%= website_detail.news_date %></td>
+        <td><%= website_detail.news_headline %></td>
+        <td><%= website_detail.news_coverage_url %></td>
+        <td><%= website_detail.news_desc %></td>
+        <td><%= website_detail.job_title %></td>
+        <td><%= website_detail.job_desc %></td>
+        <td><%= website_detail.cp_heading %></td>
+        <td><%= website_detail.cp_desc %></td>
+        <td><%= website_detail.products %></td>
+        <td><%= website_detail.team %></td>
+        <td><%= website_detail.cert_heading %></td>
+        <td><%= website_detail.cert_details %></td>
+        <td><%= website_detail.valid_from %></td>
+        <td><%= website_detail.valid_till %></td>
+        <td><%= website_detail.issued_on %></td>
+        <td><%= website_detail.issued_by %></td>
+        <td><%= website_detail.honour_award %></td>
+        <td><%= website_detail.patents %></td>
+        <td><%= website_detail.trademarks %></td>
+        <td><%= website_detail.created_by %></td>
+        <!-- <td><%= website_detail.updated_by %></td>
+        <td><%= website_detail.deleted_by %></td>
+        <td><%= website_detail.user %></td> -->
+        <td><%= link_to 'Show', website_detail %>
+        <%= link_to 'Edit', edit_website_detail_path(website_detail) %>
+        <%= link_to 'Destroy', website_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<% link_to 'New Website detail', new_website_detail_path %>

@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Designations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @designations.each do |designation| %>
+      <tr>
+        <td><%= designation.name %></td>
+        <td><%= link_to 'Show', designation %></td>
+        <td><%= link_to 'Edit', edit_designation_path(designation) %></td>
+        <td><%= link_to 'Destroy', designation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Designation', new_designation_path %>
+
+<div class="container">
+<% @designations.each do |designation| %>
+  <div class="wrapper">
+    <h4><%= designation.name %></h4>
+    <div style=""><%= link_to 'Show', designation %>|<%= link_to 'Edit', edit_designation_path(designation) %>|<%= link_to 'Destroy', designation, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+  </div>
+<% end %>
+  <%= link_to 'New Designation', new_designation_path %>
+</div>

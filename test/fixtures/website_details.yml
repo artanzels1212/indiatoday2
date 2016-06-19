@@ -1,0 +1,75 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hp_key_desc: MyString
+  hp_detail_desc: MyString
+  au_profile_heading: MyString
+  au_profile_desc: MyString
+  awards_heading: MyString
+  awards_desc: MyString
+  qc_heading: MyString
+  qc_desc: MyString
+  infra_heading: MyString
+  infra_desc: MyString
+  testimonial_date: MyString
+  testimonial_desc: MyString
+  news_date: MyString
+  news_headline: MyText
+  news_coverage_url: MyText
+  news_desc: MyText
+  job_title: MyString
+  job_desc: MyText
+  cp_heading: MyString
+  cp_desc: MyString
+  products: MyString
+  team: MyString
+  cert_heading: MyString
+  cert_details: MyString
+  valid_from: MyString
+  valid_till: MyString
+  issued_on: MyString
+  issued_by: MyString
+  honour_award: MyString
+  patents: MyString
+  trademarks: MyString
+  created_by: MyString
+  updated_by: MyString
+  deleted_by: MyString
+  user_id: 
+
+two:
+  hp_key_desc: MyString
+  hp_detail_desc: MyString
+  au_profile_heading: MyString
+  au_profile_desc: MyString
+  awards_heading: MyString
+  awards_desc: MyString
+  qc_heading: MyString
+  qc_desc: MyString
+  infra_heading: MyString
+  infra_desc: MyString
+  testimonial_date: MyString
+  testimonial_desc: MyString
+  news_date: MyString
+  news_headline: MyText
+  news_coverage_url: MyText
+  news_desc: MyText
+  job_title: MyString
+  job_desc: MyText
+  cp_heading: MyString
+  cp_desc: MyString
+  products: MyString
+  team: MyString
+  cert_heading: MyString
+  cert_details: MyString
+  valid_from: MyString
+  valid_till: MyString
+  issued_on: MyString
+  issued_by: MyString
+  honour_award: MyString
+  patents: MyString
+  trademarks: MyString
+  created_by: MyString
+  updated_by: MyString
+  deleted_by: MyString
+  user_id: 

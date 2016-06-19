@@ -1,0 +1,46 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br>
+    <%= f.text_field :password %>
+  </div>
+  <h4>Select User Role</h4>
+  <div class="field">
+    <%= f.label :sub_admin %>
+    <%= f.check_box :sub_admin, {checked:false}, "true", "false"%>
+    <%= f.label :client %>
+    <%= f.check_box :client, {checked:false}, "true", "false"%>
+  </div>
+  <h4>Select Permissions</h4>
+  <div class="field">
+    <%= f.label :contact_detail %>
+    <%= f.check_box :contact_person, {checked:false}, "true", "false"%>
+    <%= f.label :biz_tab %>
+    <%= f.check_box :biz_tab, {checked:false}, "true", "false"%>
+    <%= f.label :statutory %>
+    <%= f.check_box :statutory, {checked:false}, "true", "false"%>
+    <%= f.label :product %>
+    <%= f.check_box :product, {checked:false}, "true", "false"%>
+    <%= f.label :website_detail %>
+    <%= f.check_box :web_site_detail, {checked:false}, "true", "false"%>
+    <%= f.label :information %>
+    <%= f.check_box :information, {checked:false}, "true", "false"%>
+  </div><br>
+  <div class="actions">
+    <%= f.submit :submit,class: "btn btn-primary" %>
+  </div>
+<% end %>

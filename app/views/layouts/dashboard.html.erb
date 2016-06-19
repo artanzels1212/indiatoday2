@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clients Communication </title>
+  <%= stylesheet_link_tag 'bootstrap.min','dataTables.bootstrap','style','font'%>
+  <%= javascript_include_tag 'dashboard','jquery', 'jquery_ujs','bootstrap.min','datatables','jquery.dataTables.min','dataTables.bootstrap','app','data-turbolinks-track' => true%>
+  <%= csrf_meta_tags %>
+  <%= favicon_link_tag 'favicon.ico' %>
+   <script>
+        $(document).ready(function(){
+    	$(".error-notice").fadeOut(8000);
+    	$(".error-notice").fadeOut(8000);
+    	$(".error-notice").fadeOut(8000);
+    });
+  </script>
+</head>
+<body>	
+	<meta charset="UTF-8">
+    <title>Director | Dashboard</title>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <meta name="description" content="Developed By M Abdur Rokib Promy">
+    <meta name="keywords" content="Admin, Bootstrap 3, Template, Theme, Responsive">
+          <style type="text/css">
+
+          </style>
+      </head>
+      <body class="skin-black">
+        <!-- header logo: style can be found in header.less -->
+        <header class="header">
+            <a href="/" class="logo">
+                <%= image_tag "India Today Group Logo.png", :width=>80, :height=>80 %>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <% if current_user %>
+                <div class="navbar-right">
+                    <ul class="nav navbar-nav">
+                        <!-- Messages: style can be found in dropdown.less-->
+                        <!-- User Account: style can be found in dropdown.less -->
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-user"></i>
+                                <%=current_user.email%>
+                                <%end%>
+                            </a>
+                            <ul class="dropdown-menu dropdown-custom dropdown-menu-right">
+                                <li class="dropdown-header text-center">Account</li>
+                                <li class="divider"></li>
+                                        <li class="divider"></li>
+
+                                        <li>
+                                            <%=link_to "logout"'<i class="fa fa-ban fa-fw pull-right"></i>'.html_safe,destroy_user_session_path(:authenticity_token => form_authenticity_token()),:method => :delete%> 	
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </header>
+                <div class="wrapper row-offcanvas row-offcanvas-left">
+                    <!-- Left side column. contains the logo and sidebar -->
+                    <aside class="left-side sidebar-offcanvas">
+                        <!-- sidebar: style can be found in sidebar.less -->
+                        <section class="sidebar">
+                            <!-- Sidebar user panel -->
+                            <div class="user-panel">
+                                <!-- <div class="pull-left image">
+                                     <%= image_tag "jk.png" ,:width => "50", :height => "50"%>
+                                </div> -->
+                                <div class="pull-left info">
+                                    <h1></h1>
+                                </div>
+                            </div>
+                            <!-- search form -->
+                            <!-- /.search form -->
+                            <!-- sidebar menu: : style can be found in sidebar.less -->
+                            <ul class="sidebar-menu">
+                            	<%if @current_user.try(:admin?)%>
+                                <li>
+                                    <a href="/users">
+                                        <i class="fa fa-users"></i> <span>Create Users</span>
+                                    </a>
+                                </li>
+                                <%end%>
+                                <%if @current_user.try(:admin?)%>
+                                <li>
+                                    <a href="/app_users">
+                                        <i class="fa fa-users"></i> <span>Create App Users</span>
+                                    </a>
+                                </li>
+                                <%end%>
+                                <%if (@current_user.try(:sub_admin?) || @current_user.try(:admin?) || @current_user.try(:client?)) && (@current_user.contact_person==true) %>
+                                 <li>
+                                    <a href="/contact_details">
+                                        <i class="fa fa-info-circle"></i><span>Contact Details</span>
+                                    </a>
+                                </li>
+                                <%end%>
+                                <%if (@current_user.try(:sub_admin?) || @current_user.try(:admin?) || @current_user.try(:client?)) && (@current_user.biz_tab==true) %>
+                                 <li>
+                                    <a href="/biz_tabs">
+                                        <i class="fa fa-info-circle"></i><span>Biz Tab</span>
+                                    </a>
+                                </li>
+                                <%end%>
+                                 <%if (@current_user.try(:sub_admin?) || @current_user.try(:admin?) || @current_user.try(:client?)) && (@current_user.statutory==true) %>
+                                <li>
+                                    <a href="/statutories">
+                                        <i class="fa fa-info-circle"></i><span>Statutory</span>
+                                    </a>
+                                </li>
+                                <%end%>
+                                <%if (@current_user.try(:sub_admin?) || @current_user.try(:admin?) || @current_user.try(:client?)) && (@current_user.product==true )%>
+                                 <li>
+                                    <a href="/products">
+                                        <i class="fa fa-info-circle"></i><span>Products</span>
+                                    </a>
+                                </li>
+                                <%end%>
+                                <%if (@current_user.try(:sub_admin?) || @current_user.try(:admin?) || @current_user.try(:client?)) && (@current_user.product==true) %>
+                                 <li>
+                                    <a href="/website_details">
+                                        <i class="fa fa-info-circle"></i><span>Website Details</span>
+                                    </a>
+                                </li>
+                                <%end%>
+                                <%if @current_user.try(:sub_admin?) || @current_user.try(:admin?) || @current_user.try(:client?) && (@current_user.product==true) %>
+                                 <li>
+                                    <a href="/information">
+                                        <i class="fa fa-info-circle"></i><span>Information</span>
+                                    </a>
+                                </li>
+                                <%end%>
+                                <%if @current_user.try(:admin?) || @current_user.try(:client?)%>
+                                <li> 	
+                                    <a href="/app_users/generate_otp">
+                                        <i class="fa fa-comment-o"></i> <span>OTP</span>
+                                    </a>
+                                </li>
+                                <%end%>
+                                 <!-- <li>
+                                    <a href="/form_detail_ones">
+                                        <i class="fa fa-info-circle"></i> <span>Form Data Part One</span>
+                                    </a>
+                                </li> -->
+                                 <!-- <li>
+                                    <a href="/form_detail_twos">
+                                        <i class="fa fa-info-circle"></i> <span>Form Data Part Two</span>
+                                    </a>
+                                </li> -->
+                            </ul>
+                        </section>
+                        <!-- /.sidebar -->
+                    </aside>
+                   <aside class="right-side">
+
+                <!-- Main content -->
+                <section class="content">
+                    <%= render "/layouts/header" %>	
+ 					<% unless flash[:notice].nil? %>
+					<p class="error-notice" align = "center"><b><%= flash[:notice] %></b></p>
+					<% end %>	
+					<% unless flash[:alert].nil? %>
+					<p class="error-notice" align = "center"><b><%= flash[:alert] %></b></p>
+					<%end%>
+					<% unless flash[:error].nil? %>
+					<p class="error-notice" align = "center"><b><%= flash[:error] %></b></p>
+					<%end%>
+                    <!-- Main row -->
+                    <%= yield %>
+                    </section>
+				<!-- <%= render "/layouts/footer" %>
+                <!-- /.content -->
+            </aside><!-- /.right-side -->
+         </div><!-- ./wrapper -->
+         <div class="footer-main">
+          <strong> Client © <%= Time.now.year %> </strong> All rights reserved.
+         </div>
+</body>
+</html>

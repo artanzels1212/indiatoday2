@@ -1,0 +1,73 @@
+<p id="notice"><%= notice %></p>
+<h3 align="center">Listing Contact Details</h3>
+<table class="table table-striped table-bordered" id="contact_details">
+  <thead>
+    <tr>
+      <th>Contact person</th>
+      <th>Designation</th>
+      <th>Ceo name</th>
+      <th>Company name</th>
+      <th>Country</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Locality</th>
+      <th>Postal code</th>
+      <th>Address1</th>
+      <th>Address2</th>
+      <th>Area</th>
+      <th>Contact person no</th>
+      <th>Mobile1</th>
+      <th>Mobile2</th>
+      <th>Primary email</th>
+      <th>Alternate email</th>
+      <th>Legal owner</th>
+      <th>Legal owner design</th>
+      <th>Business category</th>
+      <th>Terms condition</th>
+      <th>Created by</th>
+      <!-- <th>Updated by</th>
+      <th>Deleted by</th> -->
+      <!-- <th>User</th> -->
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @contact_details.each do |contact_detail| %>
+      <tr>
+        <td><%= contact_detail.contact_person %></td>
+        <td><%= contact_detail.designation %></td>
+        <td><%= contact_detail.ceo_name %></td>
+        <td><%= contact_detail.company_name %></td>
+        <td><%= contact_detail.country %></td>
+        <td><%= contact_detail.city %></td>
+        <td><%= contact_detail.state %></td>
+        <td><%= contact_detail.locality %></td>
+        <td><%= contact_detail.postal_code %></td>
+        <td><%= contact_detail.address1 %></td>
+        <td><%= contact_detail.address2 %></td>
+        <td><%= contact_detail.area %></td>
+        <td><%= contact_detail.contact_person_no %></td>
+        <td><%= contact_detail.mobile1 %></td>
+        <td><%= contact_detail.mobile2 %></td>
+        <td><%= contact_detail.primary_email %></td>
+        <td><%= contact_detail.alternate_email %></td>
+        <td><%= contact_detail.legal_owner %></td>
+        <td><%= contact_detail.legal_owner_design %></td>
+        <td><%= contact_detail.business_category %></td>
+        <td><%= contact_detail.terms_condition %></td>
+        <td><%= contact_detail.created_by %></td>
+        <!-- <td><%= contact_detail.updated_by %></td>
+        <td><%= contact_detail.deleted_by %></td>
+        <td><%= contact_detail.user %></td> -->
+        <td><%= link_to 'Show', contact_detail %>
+        <%= link_to 'Edit', edit_contact_detail_path(contact_detail) %>
+        <%= link_to 'Destroy', contact_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<% link_to 'New Contact detail', new_contact_detail_path %>
